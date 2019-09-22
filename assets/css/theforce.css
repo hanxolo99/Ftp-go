@@ -1,0 +1,253 @@
+/*
+Theme Name: The Force FTP DASHBOARD
+Author: hanxolo
+Author URL: https://blog.hanxolo.com/
+*/
+
+:root{
+    --primarybackground: #141216;
+    --secondarybackground: #1a1a1f;
+    --tertiarybackground: #202026;
+    --lightfont: #fff;
+    --svgfilter:invert(15%) sepia(90%) saturate(4652%) hue-rotate(244deg) brightness(93%) contrast(115%);
+    font-family: Muli;
+    --menuborder: #303030;
+    --hovercolor: #2929fc;
+    --blue:#2929fc;
+}
+
+[data-theme="lightmode"] {
+    --primarybackground: #ffffff;
+    --secondarybackground: #e2e2e2;
+    --tertiarybackground: #ffffff;
+    --font-color: #e1e1ff;
+    --lightfont: #000;
+    --hovercolor: #2929fc;
+    --menuborder: #e2e2e2;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+.flat-header{
+    margin: 0;
+}
+header{
+    background: var(--primarybackground);
+    width:17%;
+    padding: 60px 10px 10px 20px;
+}
+.second-header{
+    background: var(--primarybackground);
+}
+.page-content{
+    background: var(--secondarybackground);
+}
+.logcat{
+    background: var(--tertiarybackground);
+}
+main{
+    width: 83%;
+}
+nav{
+    margin-top:100px;
+}
+nav img{
+    filter: var(--svgfilter);
+    width:8%;
+    padding-right: 20px;
+}
+
+img.avatar{
+border-radius: 50%;
+width: 40%;
+border: 4px solid var(--lightfont);
+}
+/*form style*/
+select{
+    box-sizing: border-box;
+    width: 12%;
+    margin-right:2%;
+    height: 25px;
+    border: none;
+    border-radius: 0;
+    padding-left:10px;
+    color: var(--lightfont);
+    background: var(--secondarybackground);
+    font-size: 13px;
+}
+input.port{
+    box-sizing: border-box;
+    width:10%;
+    margin-right:2%;
+    height: 25px;
+    border: none;
+    padding-left:10px;
+    color: var(--lightfont);
+    background: var(--secondarybackground);
+
+}
+input.hostname, input.username, input.password{
+    box-sizing: border-box;
+    width:18%;
+    margin-right:2%;
+    height: 25px;
+    border: none;
+    color: var(--lightfont);
+    padding-left:10px;
+    background: var(--secondarybackground);
+}
+input[type="submit"]{
+    box-sizing: border-box;
+    width:12%;
+    height: 25px;
+    border: none;
+    color: var(--lightfont);
+    background: var(--blue);
+    font-size: 13px;
+}
+::placeholder{
+    color: var(--lightfont);
+    font-size: 13px;
+}
+/*second header*/
+.second-header{
+    height: 15%;
+    padding: 1% 2% 1% 2%;
+    box-sizing: border-box;
+}
+.top-second-header {
+    display: flex;
+    padding-bottom: 10px;
+}
+.theme-switch-container {
+    margin-left: auto;
+}
+h2.logo.flat-header {
+    font-size: 40px;
+    font-weight: unset;
+    color:var(--lightfont);
+}
+/* page content*/
+.page-content{
+    height: 70%;
+    padding: 1% 2% 1% 2%;
+    box-sizing: border-box;
+}
+/* logcat*/
+.logcat{
+    height: 15%;
+    padding: 1% 2% 1% 2%;
+    box-sizing: border-box;
+    overflow: scroll;
+    position: relative;
+}
+
+/* font styling */
+
+p.profile-name {
+    font-size: 21px;
+    margin-top: 10px;
+    color: var(--lightfont);
+}
+
+/* random*/
+.copyright-content {
+    position: absolute;
+    bottom: 20px;
+}
+.copyright-content a{
+    text-decoration: none;
+    color: var(--lightfont);
+}
+nav ul {
+    margin-left:0;
+    padding-left:0;
+}
+nav li {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom:.5px solid var(--menuborder);
+}
+nav li a{
+    color: var(--lightfont);
+    text-decoration: none;
+    font-size: 18px;
+    transition: 1s color;
+}
+nav li:hover > a{
+    color: var(--hovercolor);
+}
+/*** toggle switch initial setup ***/
+
+.switch{
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: transparent;
+-webkit-transition: .4s;
+transition: .4s;
+border: 2px solid #fff;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 23px;
+width: 26px;
+left: 12px;
+bottom: 4px;
+box-shadow: -8px 0 0 0 #fff;
+background-color: transparent;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color:transparent;
+border: 2px solid #2929fc;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+background-color: #2929fc;
+box-shadow: none;
+left: 2px;
+
+}
+
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+
