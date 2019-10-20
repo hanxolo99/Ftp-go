@@ -23,3 +23,9 @@ if (currentTheme) {
         toggleSwitch.checked = false;
     }
 }
+
+
+var port = document.getElementById('port');
+var setPort = document.getElementById('setport');
+
+setPort.value = port.textContent;

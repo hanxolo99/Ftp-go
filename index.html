@@ -47,7 +47,7 @@
               <option>Normal</option>
               <option>TLS</option>
             </select>
-            <input type="text" placeholder="Port" class="port"/>
+            <input id="setport" type="text" placeholder="Port" class="port"/>
             <input type="text" placeholder="Hostname" class="hostname" />
             <input type="text" placeholder="Username" class="username"/>
             <input type="password" placeholder="Password" class="password" />
@@ -56,7 +56,23 @@
         </div>
       </section>
       <section class="page-content">
-          <h3 class="flat-header">CONNECTING</h3>
+          <div class="form-holder">
+            <form class="main-form onef">
+                <select class="block">
+                    <option value="" selected>Connection Type</option>
+                    <option>Normal</option>
+                    <option>TLS</option>
+                  </select>
+                <input id="port" type="text" placeholder="Port" class="block"/>
+  
+                <input type="text" placeholder="Hostname" class="block" />
+                <input type="text" placeholder="Username" class="block"/>
+                <input type="password" placeholder="Password" class="block" />
+                <button class="blocks draw" >Connect <img src="assets/images/startups.svg"></button>
+              
+            </form>
+            
+          </div>
       </section>
       <section class="logcat">
           <div class="logcat-header">
@@ -68,5 +84,7 @@
       </section>
     </main>
     <script src="assets/js/force.js"></script>
+
   </body>
 </html>
+
